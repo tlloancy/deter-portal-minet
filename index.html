@@ -3,74 +3,110 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>deter-mi.net — Le Puit de connaissance</title>
+    <title>Le Puit de connaissance — deter-mi.net</title>
     <meta
       name="description"
-      content="Portail deter-mi.net : Le Puit de connaissance, et des jeux (Forces, The 4th Coming)."
+      content="Le Puit de connaissance : hub deter-mi.net, support, Forces et The 4th Coming."
     />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/portal.css" />
   </head>
   <body>
-    <div class="grain" aria-hidden="true"></div>
+    <div class="sky" aria-hidden="true"></div>
 
     <header class="topbar">
       <a class="brand" href="/">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-name">deter-mi.net</span>
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" fill="#d7ece9" />
+          <ellipse cx="16" cy="18" rx="8" ry="3.2" fill="#2e8a8c" />
+          <path d="M8 17c0-5 3.4-9 8-9s8 4 8 9" fill="none" stroke="#2a241c" stroke-width="1.6" />
+          <path d="M12 9c2-4 8-4 10 1" fill="none" stroke="#4f8b5a" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+        deter-mi.net
       </a>
-      <p class="topbar-status">
-        <span class="pulse" aria-hidden="true"></span>
-        Portail en ligne
-      </p>
+      <nav class="nav">
+        <a href="#jeux">Jeux</a>
+        <a href="#support">Support</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <main class="shell">
-      <section class="intro">
-        <p class="eyebrow">Portail</p>
-        <h1>Le Puit de connaissance</h1>
-        <p class="lede">
-          deter-mi.net n’est pas un launcher de jeux. C’est un hub :
-          ressources, projets, et aussi des mondes jouables. Les jeux
-          ci-dessous n’en sont qu’une partie.
-        </p>
-      </section>
-
-      <section class="well" aria-labelledby="well-title">
-        <h2 id="well-title">Le puit</h2>
-        <p>
-          Ici viendront notes, outils et pages du domaine. La forme n’est
-          pas figée : cette page sert d’entrée, pas de catalogue de jeux.
-        </p>
-      </section>
-
-      <section class="games-block" aria-labelledby="games-title">
-        <div class="section-head">
-          <h2 id="games-title">Jeux</h2>
-          <p>Deux titres, deux sous-domaines. Le reste du portail reste ici.</p>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">deter-mi.net</p>
+          <h1>Le Puit de connaissance</h1>
+          <p class="lede">
+            Un endroit vivant : pages, jeux, et quelqu’un au bout du fil.
+            Tu arrives ici, tu descends où tu as besoin.
+          </p>
+          <a class="btn btn-water" href="#support">Parler au support</a>
         </div>
-        <div class="games">
-          <article class="card card-forces">
-            <div class="card-grid" aria-hidden="true"></div>
-            <p class="card-kicker">Godot · HTML5 · WebRTC</p>
-            <h3>Forces</h3>
-            <p class="card-desc">
-              Wargame au tour par tour. Déployez vos unités, jouez en
-              multijoueur peer-to-peer.
-            </p>
-            <a class="btn" href="https://forces.deter-mi.net">Jouer</a>
-          </article>
 
-          <article class="card card-t4c">
-            <div class="card-ornament" aria-hidden="true"></div>
-            <p class="card-kicker">MMORPG · client dédié</p>
-            <h3>The 4th Coming</h3>
-            <p class="card-desc">
-              Compte, client et serveur sur un site à part. Le jeu ne
-              tourne pas dans le navigateur.
-            </p>
-            <a class="btn btn-ghost" href="https://t4c.deter-mi.net">Compte &amp; client</a>
+        <div class="hero-art" aria-hidden="true">
+          <svg class="well" viewBox="0 0 420 460" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#7fd0d2" />
+                <stop offset="100%" stop-color="#1f6f70" />
+              </linearGradient>
+            </defs>
+            <ellipse class="leaf leaf-a" cx="86" cy="118" rx="28" ry="12" fill="#5aa36a" transform="rotate(-28 86 118)" />
+            <ellipse class="leaf leaf-b" cx="330" cy="96" rx="34" ry="13" fill="#3f8a52" transform="rotate(24 330 96)" />
+            <circle class="bloom" cx="72" cy="148" r="9" fill="#e26d4a" />
+            <circle class="bloom" cx="348" cy="132" r="7" fill="#f0c14a" />
+            <path d="M70 300c20-90 90-150 140-150s120 60 140 150" fill="#c9b8a0" />
+            <path d="M92 292c16-70 72-118 118-118s102 48 118 118" fill="#efe6d6" />
+            <ellipse cx="210" cy="292" rx="118" ry="28" fill="url(#water)" />
+            <ellipse class="ripple r1" cx="210" cy="292" rx="78" ry="16" fill="none" stroke="#f4efe4" stroke-width="3" opacity=".55" />
+            <ellipse class="ripple r2" cx="210" cy="292" rx="48" ry="10" fill="none" stroke="#f4efe4" stroke-width="2" opacity=".7" />
+            <circle class="spark" cx="188" cy="286" r="4" fill="#fff6d8" />
+            <rect x="96" y="300" width="228" height="88" rx="8" fill="#d9c4a4" />
+            <rect x="108" y="312" width="204" height="64" rx="6" fill="#c4ad8c" />
+            <path d="M210 196v70" stroke="#2a241c" stroke-width="6" stroke-linecap="round" />
+            <path d="M168 196h84" stroke="#2a241c" stroke-width="8" stroke-linecap="round" />
+            <circle cx="168" cy="196" r="10" fill="#e26d4a" />
+            <circle cx="252" cy="196" r="10" fill="#e26d4a" />
+          </svg>
+        </div>
+      </section>
+
+      <section id="jeux" class="band">
+        <div class="band-head">
+          <h2>Deux mondes à jouer</h2>
+          <p>Le puit n’est pas un launcher. Les jeux sont juste deux chemins parmi d’autres.</p>
+        </div>
+        <div class="tiles">
+          <article class="tile tile-forces">
+            <p class="tile-kicker">Navigateur · WebRTC</p>
+            <h3>Forces</h3>
+            <p>Wargame au tour par tour. Tu déploies, tu joues, tu te retrouves en pair-à-pair.</p>
+            <a class="btn" href="https://forces.deter-mi.net">Entrer dans Forces</a>
           </article>
+          <article class="tile tile-t4c">
+            <p class="tile-kicker">MMORPG · client</p>
+            <h3>The 4th Coming</h3>
+            <p>Compte, téléchargement, serveur. Le jeu reste hors navigateur.</p>
+            <a class="btn btn-invert" href="https://t4c.deter-mi.net">Compte et client</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="support" class="support">
+        <div class="support-inner">
+          <p class="eyebrow">Support</p>
+          <h2>Besoin d’un coup de main ?</h2>
+          <p>
+            Comptes, client, portail, Forces — écris, c’est la même maison.
+            <strong>support.deter-mi.net</strong> ouvre aussi cette page.
+          </p>
+          <a class="btn btn-sun" href="mailto:tlloancy@deter-mi.net">tlloancy@deter-mi.net</a>
         </div>
       </section>
     </main>
@@ -80,6 +116,7 @@
         <a href="#contact">Contact</a>
         <a href="#mentions">Mentions</a>
         <a href="#statut">Statut</a>
+        <a href="#support">Support</a>
       </nav>
       <p class="foot-copy">© <span id="year"></span> deter-mi.net</p>
     </footer>
@@ -102,14 +139,12 @@
           <dd>
             deter-mi.net —
             <a href="mailto:tlloancy@deter-mi.net">tlloancy@deter-mi.net</a>
-            (raison sociale et SIRET à compléter).
           </dd>
           <dt>Hébergeur</dt>
           <dd>VPS — à compléter (nom, adresse, pays).</dd>
           <dt>Données</dt>
           <dd>
-            Cette page est statique. Aucun compte n’est créé sur le portail.
-            Les comptes The 4th Coming, s’il y en a, sont gérés sur
+            Page statique. Pas de compte créé ici. The 4th Coming :
             <a href="https://t4c.deter-mi.net">t4c.deter-mi.net</a>.
           </dd>
         </dl>
@@ -121,10 +156,8 @@
       <div class="panel-inner">
         <h2>Statut</h2>
         <ul class="status-list">
-          <li>
-            <span class="dot on"></span>
-            Portail — en ligne
-          </li>
+          <li><span class="dot on"></span> Portail — en ligne</li>
+          <li><span class="dot on"></span> Support — même site que le portail</li>
           <li>
             <span class="dot unknown"></span>
             Forces —
