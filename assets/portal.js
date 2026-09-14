@@ -81,6 +81,7 @@
   var audioRaf = 0;
   var unlocked = false;
   var clipHold = 12 + Math.random() * 6;
+  var club = document.getElementById("club");
 
   function later(fn, ms) {
     timers.push(window.setTimeout(fn, ms));
@@ -177,6 +178,8 @@
     timers.forEach(clearTimeout);
     timers = [];
     root.className = "singularity";
+    if (club) club.classList.remove("is-on");
+    document.body.classList.remove("is-club");
     stopAudio();
   }
 
@@ -191,6 +194,8 @@
       sessionStorage.setItem("deter-shell", "1");
     } catch (e) {}
     root.classList.add("is-live");
+    if (club) club.classList.add("is-on");
+    document.body.classList.add("is-club");
     if (unlocked) startAudio();
     else {
       var wait = function () {
