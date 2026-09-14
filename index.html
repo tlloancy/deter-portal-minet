@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>deter-mi.net — Le Puit de connaissance</title>
+    <meta
+      name="description"
+      content="Portail deter-mi.net : Le Puit de connaissance, et des jeux (Forces, The 4th Coming)."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/portal.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">deter-mi.net</span>
+      </a>
+      <p class="topbar-status">
+        <span class="pulse" aria-hidden="true"></span>
+        Portail en ligne
+      </p>
+    </header>
+
+    <main class="shell">
+      <section class="intro">
+        <p class="eyebrow">Portail</p>
+        <h1>Le Puit de connaissance</h1>
+        <p class="lede">
+          deter-mi.net n’est pas un launcher de jeux. C’est un hub :
+          ressources, projets, et aussi des mondes jouables. Les jeux
+          ci-dessous n’en sont qu’une partie.
+        </p>
+      </section>
+
+      <section class="well" aria-labelledby="well-title">
+        <h2 id="well-title">Le puit</h2>
+        <p>
+          Ici viendront notes, outils et pages du domaine. La forme n’est
+          pas figée : cette page sert d’entrée, pas de catalogue de jeux.
+        </p>
+      </section>
+
+      <section class="games-block" aria-labelledby="games-title">
+        <div class="section-head">
+          <h2 id="games-title">Jeux</h2>
+          <p>Deux titres, deux sous-domaines. Le reste du portail reste ici.</p>
+        </div>
+        <div class="games">
+          <article class="card card-forces">
+            <div class="card-grid" aria-hidden="true"></div>
+            <p class="card-kicker">Godot · HTML5 · WebRTC</p>
+            <h3>Forces</h3>
+            <p class="card-desc">
+              Wargame au tour par tour. Déployez vos unités, jouez en
+              multijoueur peer-to-peer.
+            </p>
+            <a class="btn" href="https://forces.deter-mi.net">Jouer</a>
+          </article>
+
+          <article class="card card-t4c">
+            <div class="card-ornament" aria-hidden="true"></div>
+            <p class="card-kicker">MMORPG · client dédié</p>
+            <h3>The 4th Coming</h3>
+            <p class="card-desc">
+              Compte, client et serveur sur un site à part. Le jeu ne
+              tourne pas dans le navigateur.
+            </p>
+            <a class="btn btn-ghost" href="https://t4c.deter-mi.net">Compte &amp; client</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <nav class="foot-nav" aria-label="Pied de page">
+        <a href="#contact">Contact</a>
+        <a href="#mentions">Mentions</a>
+        <a href="#statut">Statut</a>
+      </nav>
+      <p class="foot-copy">© <span id="year"></span> deter-mi.net</p>
+    </footer>
+
+    <section id="contact" class="panel" hidden>
+      <div class="panel-inner">
+        <h2>Contact</h2>
+        <p>
+          <a href="mailto:tlloancy@deter-mi.net">tlloancy@deter-mi.net</a>
+        </p>
+        <button type="button" class="panel-close" data-close>Fermer</button>
+      </div>
+    </section>
+
+    <section id="mentions" class="panel" hidden>
+      <div class="panel-inner">
+        <h2>Mentions légales</h2>
+        <dl class="legal">
+          <dt>Éditeur</dt>
+          <dd>
+            deter-mi.net —
+            <a href="mailto:tlloancy@deter-mi.net">tlloancy@deter-mi.net</a>
+            (raison sociale et SIRET à compléter).
+          </dd>
+          <dt>Hébergeur</dt>
+          <dd>VPS — à compléter (nom, adresse, pays).</dd>
+          <dt>Données</dt>
+          <dd>
+            Cette page est statique. Aucun compte n’est créé sur le portail.
+            Les comptes The 4th Coming, s’il y en a, sont gérés sur
+            <a href="https://t4c.deter-mi.net">t4c.deter-mi.net</a>.
+          </dd>
+        </dl>
+        <button type="button" class="panel-close" data-close>Fermer</button>
+      </div>
+    </section>
+
+    <section id="statut" class="panel" hidden>
+      <div class="panel-inner">
+        <h2>Statut</h2>
+        <ul class="status-list">
+          <li>
+            <span class="dot on"></span>
+            Portail — en ligne
+          </li>
+          <li>
+            <span class="dot unknown"></span>
+            Forces —
+            <a href="https://forces.deter-mi.net">forces.deter-mi.net</a>
+          </li>
+          <li>
+            <span class="dot unknown"></span>
+            The 4th Coming —
+            <a href="https://t4c.deter-mi.net">t4c.deter-mi.net</a>
+          </li>
+        </ul>
+        <button type="button" class="panel-close" data-close>Fermer</button>
+      </div>
+    </section>
+
+    <script src="assets/portal.js"></script>
+  </body>
+</html>
