@@ -89,6 +89,8 @@ a:hover {
 .brand-mark {
   width: 2rem;
   height: 2rem;
+  display: block;
+  object-fit: contain;
 }
 
 .nav {
@@ -110,9 +112,9 @@ a:hover {
 
 .hero {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: 0.9fr 1.15fr;
   align-items: center;
-  gap: 1rem 2rem;
+  gap: 1.2rem 1.4rem;
   width: min(100% - 2rem, var(--max));
   margin: 0 auto;
   padding: 1.5rem 0 3rem;
@@ -151,64 +153,105 @@ a:hover {
   font-size: 1.15rem;
 }
 
-.hero-art {
+.gate {
+  position: relative;
   display: grid;
-  place-items: center;
-}
-
-.well {
-  width: min(100%, 26rem);
+  grid-template-columns: minmax(11rem, 16.5rem) minmax(0, 1fr);
+  align-items: center;
+  min-height: 18rem;
   overflow: visible;
 }
 
-.ripple {
-  transform-origin: 210px 292px;
-  animation: ripple 3.4s ease-out infinite;
+.gate-figure {
+  position: relative;
+  z-index: 2;
 }
 
-.r2 {
-  animation-delay: 1.1s;
+.gate-cat {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.leaf-a {
-  animation: sway-a 4.5s ease-in-out infinite;
+.gate-glow {
+  position: absolute;
+  left: 62%;
+  top: 58%;
+  z-index: 1;
+  width: 22rem;
+  height: 16rem;
+  transform: translate(-12%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 28% 50%,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(212, 235, 240, 0.7) 38%,
+    rgba(46, 138, 140, 0.22) 62%,
+    transparent 74%
+  );
+  box-shadow: 0 0 0 2px rgba(46, 138, 140, 0.18);
+  animation: gate-breathe 5s ease-in-out infinite;
 }
 
-.leaf-b {
-  animation: sway-b 5.2s ease-in-out infinite;
+.gate-portal {
+  position: relative;
+  z-index: 3;
+  min-height: 0;
+  margin-left: -0.4rem;
+  padding: 0.4rem 0.2rem 0.4rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.bloom,
-.spark {
-  animation: float 3.2s ease-in-out infinite;
+.gate-kicker {
+  position: relative;
+  margin: 0 0 0.7rem;
+  color: var(--water);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
-@keyframes ripple {
-  0% {
-    transform: scale(0.7);
-    opacity: 0.7;
-  }
-  100% {
-    transform: scale(1.35);
-    opacity: 0;
-  }
+.gate-list {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.1rem 0.9rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-@keyframes sway-a {
+.gate-list a {
+  display: block;
+  padding: 0.38rem 0.1rem;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.gate-list a:hover {
+  color: var(--water-deep);
+}
+
+.gate-list small {
+  display: block;
+  margin-top: 0.12rem;
+  font-weight: 500;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+@keyframes gate-breathe {
   50% {
-    transform: rotate(-36deg);
-  }
-}
-
-@keyframes sway-b {
-  50% {
-    transform: rotate(32deg);
-  }
-}
-
-@keyframes float {
-  50% {
-    transform: translateY(-6px);
+    transform: scale(1.035);
+    opacity: 0.55;
   }
 }
 
@@ -599,6 +642,31 @@ a:hover {
 
   .hero {
     padding-top: 0.4rem;
+  }
+
+  .gate {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    min-height: 0;
+    gap: 0;
+  }
+
+  .gate-figure {
+    width: min(14rem, 70%);
+  }
+
+  .gate-glow {
+    left: 50%;
+    top: 78%;
+    width: 18rem;
+    height: 10rem;
+    transform: translate(-50%, -20%);
+  }
+
+  .gate-portal {
+    margin-left: 0;
+    width: 100%;
+    padding: 1.2rem 0.4rem 0.2rem;
   }
 
   .nav {
