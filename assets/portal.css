@@ -57,6 +57,7 @@ a:hover {
 .hero,
 .band,
 .support,
+.faq,
 .foot {
   position: relative;
   z-index: 1;
@@ -325,6 +326,36 @@ a:hover {
 
 .tile .btn {
   margin-top: auto;
+}
+
+.faq-list {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+}
+
+.faq-list > div {
+  padding: 1.15rem 1.2rem;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.faq-list dt {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.45rem;
+}
+
+.faq-list dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+.faq-list a {
+  color: var(--ink);
+  font-weight: 700;
 }
 
 .support {
