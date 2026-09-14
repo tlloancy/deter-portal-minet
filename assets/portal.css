@@ -358,6 +358,96 @@ a:hover {
   font-weight: 700;
 }
 
+.crumbs {
+  margin: 0 0 0.85rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.crumbs a {
+  color: var(--water-deep);
+  text-decoration: none;
+}
+
+.page-hero {
+  display: block;
+  padding-bottom: 2rem;
+}
+
+.page-hero h1 {
+  font-size: clamp(2.1rem, 5.5vw, 3.4rem);
+}
+
+.prose {
+  max-width: 42rem;
+  margin: 0 0 1.6rem;
+}
+
+.prose h2 {
+  margin: 1.6rem 0 0.55rem;
+  font-family: var(--display);
+  font-size: clamp(1.45rem, 3vw, 1.9rem);
+  letter-spacing: -0.03em;
+}
+
+.prose p,
+.prose li {
+  color: var(--muted);
+}
+
+.prose ul {
+  margin: 0 0 1rem;
+  padding-left: 1.15rem;
+}
+
+.place-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.band .place-list {
+  margin-bottom: 0;
+}
+
+.place-list li {
+  border: 2px solid var(--ink);
+  background: #d4ebf0;
+  padding: 0.35rem 0.7rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.proof {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+  margin: 0 0 2rem;
+}
+
+.proof-card {
+  padding: 1rem 1.05rem;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.proof-card strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 1.7rem;
+  line-height: 1.1;
+}
+
+.proof-card span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 .support {
   background: var(--clay);
   color: #fff8f2;
@@ -502,7 +592,8 @@ a:hover {
 @media (max-width: 860px) {
   .hero,
   .tiles,
-  .tiles-4 {
+  .tiles-4,
+  .proof {
     grid-template-columns: 1fr;
   }
 
