@@ -549,6 +549,21 @@ a:hover {
   margin: 0;
 }
 
+.foot-music {
+  margin: 0;
+  width: 100%;
+  font-size: 0.78rem;
+}
+
+.foot-music a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.foot-music a:hover {
+  color: var(--ink);
+}
+
 .panel {
   position: fixed;
   inset: 0;
@@ -672,5 +687,181 @@ a:hover {
   .nav {
     gap: 0.85rem;
     font-size: 0.95rem;
+  }
+}
+
+.singularity {
+  position: fixed;
+  inset: 0;
+  z-index: 6;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  pointer-events: none;
+  overflow: hidden;
+  --sx: 12%;
+  --sy: 14%;
+}
+
+.singularity:not(.is-live) {
+  visibility: hidden;
+}
+
+.singularity-point,
+.singularity-laser,
+.singularity-static,
+.singularity-term {
+  position: absolute;
+  left: var(--sx);
+  top: var(--sy);
+  pointer-events: none;
+}
+
+.singularity-point {
+  width: 5px;
+  height: 5px;
+  margin: -2px 0 0 -2px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0;
+  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.9), 0 0 28px 8px rgba(46, 138, 140, 0.55);
+}
+
+.singularity.is-live .singularity-point {
+  animation: sing-point 0.55s ease-out forwards;
+}
+
+.singularity-laser {
+  height: 2px;
+  width: 0;
+  margin-top: -1px;
+  background: linear-gradient(90deg, #fff 0%, #7fd0d2 45%, transparent 100%);
+  box-shadow: 0 0 8px #fff, 0 0 18px var(--water);
+  transform-origin: left center;
+  opacity: 0;
+}
+
+.singularity.is-laser .singularity-laser {
+  animation: sing-laser 0.38s ease-out forwards;
+}
+
+.singularity-static {
+  width: 16rem;
+  height: 5.5rem;
+  margin: -1.4rem 0 0 -0.4rem;
+  opacity: 0;
+  background: repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.22) 0 1px,
+      transparent 1px 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(46, 138, 140, 0.18) 0 1px,
+      transparent 1px 2px
+    );
+  mix-blend-mode: overlay;
+}
+
+.singularity.is-laser .singularity-static {
+  animation: sing-static 0.4s steps(5) forwards;
+}
+
+.singularity-term {
+  margin: 0.7rem 0 0;
+  min-width: 16rem;
+  padding: 0.7rem 0.85rem 0.75rem;
+  background: rgba(18, 20, 18, 0.88);
+  color: #d7ece9;
+  font: 0.82rem/1.45 ui-monospace, "Cascadia Code", Consolas, monospace;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  transform: scale(0.04);
+  transform-origin: 0 0;
+  box-shadow: 0 0 0 1px rgba(127, 208, 210, 0.35), 0 12px 32px rgba(42, 36, 28, 0.28);
+}
+
+.singularity.is-term .singularity-term {
+  opacity: 1;
+  transform: scale(1);
+  animation: sing-term 0.48s cubic-bezier(0.16, 0.84, 0.32, 1) both;
+}
+
+.singularity-prompt {
+  color: #7fd0d2;
+}
+
+.singularity-caret {
+  color: #f4efe4;
+  animation: sing-caret 1s steps(1) infinite;
+}
+
+.singularity.is-done .singularity-point,
+.singularity.is-done .singularity-laser,
+.singularity.is-done .singularity-static {
+  opacity: 0;
+}
+
+@keyframes sing-point {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes sing-laser {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    width: 18rem;
+    opacity: 0.85;
+  }
+}
+
+@keyframes sing-static {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sing-term {
+  0% {
+    opacity: 0;
+    transform: scale(0.04);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes sing-caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .singularity {
+    display: none;
   }
 }
